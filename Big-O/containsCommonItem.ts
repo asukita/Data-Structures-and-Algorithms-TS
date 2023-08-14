@@ -53,6 +53,18 @@ function containsCommonItem2(arr1: Array<string>, arr2: Array<string>) {
 //O(a + b) Time Complexity
 //O(1) Space Complexity
 
+// another option could be using find
+function containsCommonItem4(arr1: Array<string>, arr2: Array<string>) {
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.find((elem) => elem === arr1[i])){
+      return true;
+    }
+  }
+  return false
+}
+//O(a + b) Time Complexity
+//O(a) Space Complexity
+
 // containsCommonItem2(array1, array2)
 
 function containsCommonItem3(arr1: Array<string>, arr2: Array<string>) {
@@ -63,4 +75,5 @@ function containsCommonItem3(arr1: Array<string>, arr2: Array<string>) {
 console.log(containsCommonItem(array1, array2));
 console.log(containsCommonItem2(array1, array2));
 console.log(containsCommonItem3(array1, array2));
+console.log(containsCommonItem4(array1, array2));
 
